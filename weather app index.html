@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WeatherNow</title>
+        <meta name="description" content="Modern weather dashboard for quick city conditions and climate details.">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <div class="app-shell">
+            <div class="weather-panel">
+                <header class="topbar">
+                    <div class="brand" aria-label="Weather app brand">
+                        <span class="brand-mark">☀</span>
+                        <span>WeatherNow</span>
+                    </div>
+                    <div class="date-pill" id="dateValue">Loading date...</div>
+                </header>
+
+                <form class="search-bar" id="searchForm">
+                    <label class="search-field" for="cityInput">
+                        <span class="search-icon">📍</span>
+                        <input type="text" id="cityInput" placeholder="Search for a city" aria-label="Search city" autocomplete="off">
+                    </label>
+                    <button type="submit" id="searchBtn">Search</button>
+                </form>
+
+                <div class="status-row">
+                    <span class="live-dot"></span>
+                    <p id="updated">Updated just now</p>
+                </div>
+
+                <main id="weather" class="weather-content" aria-live="polite"></main>
+            </div>
+        </div>
+    </body>
+</html>
